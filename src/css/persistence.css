@@ -1,0 +1,140 @@
+
+/* Індикатор локального збереження */
+
+.tf7-persistence {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px 14px;
+  margin: 18px 0;
+  padding: 13px 16px;
+  border: 1px solid #385a7a;
+  border-radius: 12px;
+  background: #142a42;
+  color: #e4f2ff;
+  font-size: 14px;
+}
+
+.tf7-persistence strong {
+  color: #ffffff;
+}
+
+.tf7-persistence span {
+  flex: 1 1 240px;
+}
+
+.tf7-persistence--saved {
+  border-color: #327c78;
+}
+
+.tf7-persistence--saving {
+  border-color: #b49346;
+}
+
+.tf7-persistence--loading {
+  border-color: #557391;
+}
+
+.tf7-persistence--error {
+  border-color: #bb5c68;
+  background: #482938;
+}
+
+/* Виправлення блока проєктів */
+
+.tf6-project-panel .tf6-project-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+  gap: 12px;
+  align-items: stretch;
+}
+
+.tf6-project-panel .tf6-project-pill {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  gap: 9px;
+  min-width: 0;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 14px;
+  white-space: normal;
+  line-height: 1.5;
+}
+
+.tf6-project-panel .tf6-project-pill strong {
+  display: block;
+  font-size: 15px;
+  color: #55d5ff;
+  overflow-wrap: anywhere;
+}
+
+.tf6-project-panel .tf6-project-pill span {
+  display: block;
+  flex: none;
+  overflow-wrap: anywhere;
+}
+
+.tf6-project-panel .tf6-project-pill button {
+  width: 100%;
+  margin-top: 4px;
+}
+
+/* Адаптивність */
+
+@media (max-width: 680px) {
+  .tf7-persistence {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .tf7-persistence span {
+    flex-basis: auto;
+  }
+
+  .tf6-project-panel .tf6-project-list {
+    grid-template-columns: 1fr;
+  }
+
+  .tf6-project-panel .tf6-project-pill {
+    width: 100%;
+  }
+}
+
+/* Дата останнього успішного збереження */
+
+.tf7-save-time {
+  flex-basis: 100%;
+  font-size: 12px;
+  opacity: 0.85;
+}
+
+/* Блок резервного копіювання */
+
+.tf7-backup-panel {
+  margin-top: 18px;
+}
+
+.tf7-backup-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.tf7-backup-actions button {
+  flex: 1 1 180px;
+}
+
+/* Адаптивність */
+
+@media (max-width: 680px) {
+  .tf7-backup-actions {
+    flex-direction: column;
+  }
+
+  .tf7-backup-actions button {
+    width: 100%;
+  }
+}
